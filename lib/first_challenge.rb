@@ -14,7 +14,22 @@ def first_challenge
   }
 
   #your code here
-
+  #your code here
+  
+contacts.each do |person, data|
+  #at this level, "person" is Jon Snow or Freddy and "data" is a hash of key/value pairs
+  #to iterate over the "data" hash, we can use the following line: 
+ 
+  data.each do |attribute, value|
+  if attribute == :favorite_icecream_flavors
+      value.delete_if do |flavor|
+        
+        flavor == "strawberry"
+      end
+    
+  end
+end
+end
 
   #remember to return your newly altered contacts hash!
   contacts
